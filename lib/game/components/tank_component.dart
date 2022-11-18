@@ -1,18 +1,12 @@
 import 'package:flame/components.dart';
-import 'package:flame/events.dart';
 
-class TankComponent extends SpriteComponent with Tappable {
+class TankComponent extends SpriteComponent {
   @override
   Future onLoad() async {
-    position = Vector2(10, 10);
+    position = Vector2(100, 100);
     anchor = Anchor.center;
 
-    size = Vector2.all(128);
+    size = Vector2.all(64);
     sprite = await Sprite.load('tank.png');
-  }
-
-  @override
-  bool onTapDown(TapDownInfo info) {
-    return true;
   }
 }
