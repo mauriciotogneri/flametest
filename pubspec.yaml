@@ -9,6 +9,8 @@ environment:
 dependencies:
   get_it: ^7.2.0
   dafluta: ^4.4.0
+  
+  flame: 1.4.0
 
   flutter:
     sdk: flutter
