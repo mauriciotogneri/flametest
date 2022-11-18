@@ -1,14 +1,12 @@
+import 'package:flame/game.dart';
+import 'package:flametest/game/my_game.dart';
 import 'package:flutter/material.dart';
 
 class GameScreen extends StatelessWidget {
-  const GameScreen();
+  final MyGame myGame = MyGame();
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('GAME'),
-      ),
-    );
+    return GameWidget(game: myGame);
   }
 }
