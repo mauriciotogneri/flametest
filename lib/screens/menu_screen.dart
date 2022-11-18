@@ -18,6 +18,10 @@ class MenuScreen extends StatelessWidget {
 
   void _launchGame(BuildContext context) => Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => GameScreen()),
+        PageRouteBuilder(
+          pageBuilder: (context, animation, secondaryAnimation) => GameScreen(),
+          transitionsBuilder: (context, animation, secondaryAnimation, child) =>
+              child,
+        ),
       );
 }

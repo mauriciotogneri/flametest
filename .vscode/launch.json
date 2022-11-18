@@ -5,7 +5,11 @@
             "name": "Flame Test",
             "request": "launch",
             "type": "dart",
-            "program": "lib/main.dart"
+            "program": "lib/main.dart",
+            "args": [
+                "--web-renderer",
+                "canvaskit"
+            ]
         }
     ]
 }
