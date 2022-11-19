@@ -7,10 +7,19 @@ class MyGame extends FlameGame with SingleGameInstance {
   Future onLoad() async {
     await add(TankComponent());
 
+    /*add(FpsTextComponent(
+      position: Vector2(
+        50,
+        (100 * (camera.canvasSize.y / camera.canvasSize.x)) / 2,
+      ),
+      scale: Vector2(0.2, 0.2),
+      anchor: Anchor.center,
+    ));*/
+
     camera.viewport = FixedResolutionViewport(
       Vector2(
         100,
-        (100 * (camera.canvasSize.y / camera.canvasSize.y)).round().toDouble(),
+        (100 * (camera.canvasSize.y / camera.canvasSize.x)).round().toDouble(),
       ),
     );
   }

@@ -1,4 +1,4 @@
-import 'package:flametest/screens/menu_screen.dart';
+import 'package:flametest/screens/game_screen.dart';
 import 'package:flutter/material.dart';
 
 class FlameTestApp extends StatelessWidget {
@@ -12,7 +12,7 @@ class FlameTestApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MenuScreen(),
+      home: GameScreen(),
     );
   }
 }
