@@ -1,4 +1,5 @@
 import 'package:flame/components.dart';
+import 'package:flametest/utils/assets.dart';
 
 class TankComponent extends SpriteComponent {
   @override
@@ -7,6 +8,6 @@ class TankComponent extends SpriteComponent {
     anchor = Anchor.center;
 
     size = Vector2.all(64);
-    sprite = await Sprite.load('tank.png');
+    sprite = await Sprite.load(Assets.IMAGES_TANK);
   }
 }

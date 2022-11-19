@@ -6,6 +6,13 @@ class MyGame extends FlameGame with SingleGameInstance {
   @override
   Future onLoad() async {
     await add(TankComponent());
+
+    camera.viewport = FixedResolutionViewport(
+      Vector2(
+        100,
+        (100 * (camera.canvasSize.y / camera.canvasSize.y)).round().toDouble(),
+      ),
+    );
   }
 
   @override
