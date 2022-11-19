@@ -1,15 +1,20 @@
 import 'package:flame/game.dart';
 import 'package:flame/palette.dart';
-import 'package:flametest/game/components/terrain_component.dart';
+import 'package:flame_tiled/flame_tiled.dart';
+import 'package:flametest/utils/assets.dart';
 
 class MyGame extends FlameGame with SingleGameInstance {
   @override
   Future onLoad() async {
-    for (int i = 0; i < 10; i++) {
+    /*for (int i = 0; i < 10; i++) {
       for (int j = 0; j < 10; j++) {
         await add(TerrainComponent(i: i, j: j));
       }
-    }
+    }*/
+
+    final TiledComponent map =
+        await TiledComponent.load(Assets.TILES_MAP, Vector2.all(100 / 7));
+    add(map);
 
     /*add(FpsTextComponent(
       position: Vector2(
