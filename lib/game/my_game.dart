@@ -1,11 +1,15 @@
 import 'package:flame/game.dart';
 import 'package:flame/palette.dart';
-import 'package:flametest/game/components/tank_component.dart';
+import 'package:flametest/game/components/terrain_component.dart';
 
 class MyGame extends FlameGame with SingleGameInstance {
   @override
   Future onLoad() async {
-    await add(TankComponent());
+    for (int i = 0; i < 10; i++) {
+      for (int j = 0; j < 10; j++) {
+        await add(TerrainComponent(i: i, j: j));
+      }
+    }
 
     /*add(FpsTextComponent(
       position: Vector2(
@@ -19,7 +23,7 @@ class MyGame extends FlameGame with SingleGameInstance {
     camera.viewport = FixedResolutionViewport(
       Vector2(
         100,
-        (100 * (camera.canvasSize.y / camera.canvasSize.x)).round().toDouble(),
+        100 * (camera.canvasSize.y / camera.canvasSize.x),
       ),
     );
   }
